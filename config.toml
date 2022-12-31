@@ -1,57 +1,191 @@
-baseURL = 'http://webs.uvigo.es/asanchez/'
-#title = "Hi!, I'm Anxo Sánchez"
-# include content marked as draft
-buildDrafts = false
-# include content with publishdate in the future
-buildFuture = false
-# include content already expired
-buildExpired = false
-# enable this to make all relative URLs relative to content root. Note that this does not affect absolute URLs.
-relativeURLs = true
-disableRSS = true
-enableRobotsTXT = true
-editor = "nano"
-languageCode = "en"
-language = "en"
-theme = "vncnt-hugo"
-title = "Anxo Sánchez · Presonal Page"
+baseURL = "https://anxouvigo.github.io"
+title   = "Blog da Enxeñaría Química"
+languageCode = "en-us"
+theme = "hello-friend-ng"
 
-_merge = "none"
+PygmentsCodeFences = true
+PygmentsStyle = "monokai"
+
+paginate  = 10
+rssLimit  = 10  # Maximum number of items in the RSS feed.
+copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
+
+# googleAnalytics = ""
+# disqusShortname = ""
+
+archetypeDir = "archetypes"
+contentDir   = "content"
+dataDir      = "data"
+layoutDir    = "layouts"
+publishDir   = "public"
+
+buildDrafts  = false
+buildFuture  = false
+buildExpired = false
+canonifyURLs = true
+
+enableRobotsTXT = true
+enableGitInfo   = false
+enableEmoji     = true
+enableMissingTranslationPlaceholders = false
+disableRSS     = false
+disableSitemap = false
+disable404     = false
+disableHugoGeneratorInject = false
 
 [permalinks]
-  fixed = ":title/"
-  posts = "posts/:slug/"
+  posts = "/posts/:year/:month/:title/"
+
+[author]
+  name = "Anxo Sánchez"
+
+[blackfriday]
+  hrefTargetBlank = true
+
+[taxonomies]
+  tag      = "tags"
+  category = "categories"
+  series   = "series"
 
 [params]
-  author = "Anxo Sánchez"
-  # email does still work but is deprecated.
-  # use [params.contact.email] instead.
-  #email = "john.doe@example.com"
-  description = "Landing Page"
-  bio = "First Row.  \nSecond Row."
-  avatar = "img/avatar.jpg"
-  favicon = "img/favicon.ico"
-  error404 = "There is no such page."
+  dateform        = "2 Jan 2006"
+  dateformShort   = "2 Jan"
+  dateformNum     = "02-01-2006"
+  dateformNumTime = "02-01-2006 15:04"
 
-  [params.contact]
-    github = "https://github.com/anxosanchez"
-    # instagram = "https://instagram.com/jdoe"
-    twitter = "https://twitter.com/anxosanchez"
-    
-    # You may use (inline) tables for more versatility
-    # This allows sorting and even more icons.
-    # Just make sure not to mix key-value pairs, inline tables and tables,
-    # although keeping keeping this order is ok.
-    # See https://toml.io/en/v1.0.0 for details
-    0 = { name = "ello", icon = "ello", style = "fab", link = "" } # empty links are relative to site root
-    [params.contact.1] # key names are sorted lexicographically
-      # name = "hiking club" # may be omitted. defaults to key name
-      icon = "hiking" # may be omitted. defaults to key name
-      style = "fas" # may be omitted. default = "fas"
-      link = "https://eqea.uvigo.gal"
-    [params.contact.email]
-      name = "asanchez@uvigo.gal" # may be omitted. defaults to key name
-      icon = "envelope" # may be omitted. defaults to key name
-      style = "fas" # may be omitted. default = "fas"
-      link = "mailto:asanchez@uvigo.gal"
-    
+  # Metadata mostly used in document's head
+  # 
+  description = "O blog da titulación Enxeñaría Química Industrial na Universidade de Vigo"
+  keywords = ""
+  images = [""]
+
+  # Home subtitle of the index page.
+  #
+  homeSubtitle = "Escola de Enxeñaría Industrial"
+
+  # Set a background for the homepage
+  # backgroundImage = "assets/images/background.jpg"
+
+  # Prefix of link to the git commit detail page. GitInfo must be enabled.
+  #
+  # gitUrl = ""
+  # Set disableReadOtherPosts to true in order to hide the links to other posts.
+  #
+  disableReadOtherPosts = false
+
+  # Enable theme toggle
+  # 
+  # This options enables the theme toggle for the theme. 
+  # Per default, this option is off. 
+  # The theme is respecting the prefers-color-scheme of the operating systeme. 
+  # With this option on, the page user is able to set the scheme he wants. 
+  enableThemeToggle = false
+
+  # Sharing buttons
+  #
+  # There are a lot of buttons preconfigured. If you want to change them,
+  # generate the buttons here: https://sharingbuttons.io
+  # and add them into your own `layouts/partials/sharing-buttons.html`
+  #
+  enableSharingButtons = true
+
+  # Integrate Javascript files or stylesheets by adding the url to the external assets or by
+  # linking local files with their path relative to the static folder, e.g. "css/styles.css"
+  #
+  customCSS = []
+  customJS  = []
+
+  # Toggle this option need to rebuild SCSS, requires extended version of Hugo
+  #
+  justifyContent = false  # Set "text-align: justify" to .post-content.
+
+  # Custom footer 
+  # If you want, you can easily override the default footer with your own content. 
+  #
+  [params.footer]
+    trademark = true
+    rss = true
+    copyright = true
+    author = true
+
+    topText = []
+    bottomText = ["Powered by <a href=\"http://gohugo.io\">Hugo</a>",
+            "Made with &#10084; by <a href=\"https://github.com/rhazdon\">Djordje Atlialp</a>"]
+
+  # Colors for favicons
+  #
+  [params.favicon.color]
+    mask = "#1b1c1d"
+    msapplication = "#1b1c1d"
+    theme = "#1b1c1d"
+
+  [params.logo]
+    logoMark     = ">"
+    logoText     = "$ cd /home/"
+    logoHomeLink = "/"
+    # Set true to remove the logo cursor entirely.
+    # logoCursorDisabled = false
+    # Set to a valid CSS color to change the cursor in the logo.
+    # logoCursorColor    = "#67a2c9"
+    # Set to a valid CSS time value to change the animation duration, "0s" to disable.
+    # logoCursorAnimate  = "2s"
+
+  # Commento is more than just a comments widget you can embed — 
+  # it’s a return to the roots of the internet. 
+  # An internet without the tracking and invasions of privacy. 
+  # An internet that is simple and lightweight. 
+  # An internet that is focused on interesting discussions, not ads. 
+  # A better internet.
+  # Uncomment this to enable Commento.
+  #
+  # [params.commento]
+  #   url = ""
+
+  # Uncomment this if you want a portrait on your start page
+  #
+  # [params.portrait]
+  #   path     = "/img/image.jpg"
+  #   alt      = "Portrait"
+  #   maxWidth = "50px"
+
+  # Social icons
+  [[params.social]]
+    name = "twitter"
+    url  = "https://anxosanchez.twitter.com/"
+
+  [[params.social]]
+    name = "email"
+    url  = "mailto:asanchez@uvigo.gal"
+
+  [[params.social]]
+    name = "github"
+    url  = "https://anxouvigo.github.io/"
+
+  [[params.social]]
+    name = "linkedin"
+    url  = "https://www.linkedin.com/"
+
+  [[params.social]]
+    name = "orcid"
+    url  = "https://orcid.org/0000-0002-9757-1752"
+
+[languages]
+  [languages.en]
+    subtitle  = "Hello Friend NG Theme"
+    weight    = 1
+    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+
+  [languages.gl]
+    subtitle  = "Hello Friend NG Theme"
+    weight    = 2
+    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name       = "About"
+    url        = "about/"
+  [[menu.main]]
+    identifier = "posts"
+    name       = "Posts"
+    url        = "posts/"

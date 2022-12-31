@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>VLE on Blog da Enxeñaría Química</title>
+    <link>/tags/vle/</link>
+    <description>Recent content in VLE on Blog da Enxeñaría Química</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Mon, 19 Jul 2021 12:02:00 +0200</lastBuildDate><atom:link href="/tags/vle/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Equilibrio Vapor Líquido (EVL)</title>
+      <link>/posts/2021/07/equilibrio-vapor-l%C3%ADquido-evl/</link>
+      <pubDate>Mon, 19 Jul 2021 12:02:00 +0200</pubDate>
+      
+      <guid>/posts/2021/07/equilibrio-vapor-l%C3%ADquido-evl/</guid>
+      <description>A lei de Raoult enuncia que, para unha solución ideal, a presión parcial de equilibrio dun compoñente a unha temperatura fixa $T$ é igual ao produto da súa presión de vapor (cando é puro) e a súa fracción molar na mestura líquida:
+$$ P_i = P_i^0 x $$ onde: $P_i$ é a presión de vapor co compoñente i da mestura $x_i$ é a fracción molar do compoñente $i$ na mestura $P_i^0$ é a presión de vapor do compoñente $i$ da mestura puro.</description>
+    </item>
+    
+  </channel>
+</rss>

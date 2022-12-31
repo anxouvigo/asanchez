@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>root finding on Blog da Enxeñaría Química</title>
+    <link>/tags/root-finding/</link>
+    <description>Recent content in root finding on Blog da Enxeñaría Química</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Fri, 30 Apr 2021 13:50:57 +0200</lastBuildDate><atom:link href="/tags/root-finding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ecuación de van der Waals</title>
+      <link>/posts/2021/04/ecuaci%C3%B3n-de-van-der-waals/</link>
+      <pubDate>Fri, 30 Apr 2021 13:50:57 +0200</pubDate>
+      
+      <guid>/posts/2021/04/ecuaci%C3%B3n-de-van-der-waals/</guid>
+      <description>Resolución da ecuación de van der Waals Tipo de problema Resolución dunha ecuación non liñal
+Método numérico Gráfico, iteración de punto fixo, Newton Raphson
+Algoritmos para resolver f(x) = 0 Moitos problemas da enxeñaría química requiren a solución dunha ecuación non lineal. A ecuación de Van der Waals é unha ecuaciónb non lineal que pode expresarse na forma: $$ f(x) = 0 $$ Un exemplo de ecuación non lineal na enxeñaría química é a ecuación de Van der Waals, que ven dada por: $$ (P + \frac{a}{V^2}) (V−b) = RT $$ onde $V$ é o volume molar do gas, $p$ a presión, $a$ e $b$ constates características de cada gas que se calculan a partires das súas propiedades críticas do seguinte xeito: $$ a = \frac{27}{64}\frac{R^2T_c^2}{P_c} $$ onde $T_c$ é a temperatura crítica e $P_c$ é a presión crítica para o gas.</description>
+    </item>
+    
+  </channel>
+</rss>
