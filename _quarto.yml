@@ -10,14 +10,16 @@ website:
         text: Home
       - about.qmd
       - posts.qmd   
+  search: 
+    location: navbar
+    type: overlay
 
 format:
   html:
     theme: 
-      light: morph
       dark: solar
+      light: morph
+      
     css: styles.css
     toc: true
-
-
 
