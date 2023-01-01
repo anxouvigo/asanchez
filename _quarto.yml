@@ -1,0 +1,22 @@
+project:
+  type: website
+  output-dir: public
+
+website:
+  title: "Anxo Sánchez's Personal Academic Site"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+
+format:
+  html:
+    theme: 
+    light: solar
+    dark: morph
+    css: styles.css
+    toc: true
+
+
+
