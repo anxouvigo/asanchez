@@ -3,18 +3,19 @@ project:
   output-dir: public
 
 website:
-  title: "Anxo Sánchez's Personal Academic Site"
+  title: "ASPAS"
   navbar:
     left:
       - href: index.qmd
         text: Home
       - about.qmd
+      - posts.qmd   
 
 format:
   html:
     theme: 
-      - light: solar
-      - dark: morph
+      light: morph
+      dark: solar
     css: styles.css
     toc: true
 
