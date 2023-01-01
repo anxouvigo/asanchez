@@ -13,8 +13,8 @@ website:
 format:
   html:
     theme: 
-    light: solar
-    dark: morph
+      - light: solar
+      - dark: morph
     css: styles.css
     toc: true
 
