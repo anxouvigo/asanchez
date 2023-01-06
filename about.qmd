@@ -1,5 +1,20 @@
 ---
-title: "About"
+title: "Anxo Sánchez"
+about:
+  template: jolla
+  image: 11378621.jpg
+  links:
+    - icon: twitter
+      text: twitter
+      href: https://twitter.com/anxosanchez
+    - icon: github
+      text: Github
+      href: https://github.com/anxosanchez
 ---
 
-About this site
+Full Professor @ Chemical Engineering Department, University of Vigo (SPAIN)
+
+## Education
+
+PhD in Chemistry | 1985 | University of Santiago de Compostela
+

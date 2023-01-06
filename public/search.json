@@ -2,9 +2,16 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "Anxo Sánchez",
     "section": "",
-    "text": "About this site"
+    "text": "Full Professor @ Chemical Engineering Department, University of Vigo (SPAIN)"
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "Anxo Sánchez",
+    "section": "Education",
+    "text": "Education\nPhD in Chemistry | 1985 | University of Santiago de Compostela"
   },
   {
     "objectID": "index.html",
