@@ -6,10 +6,10 @@ website:
   title: "ASPAS"
   navbar:
     left:
-      - href: index.qmd
-        text: Home
+      - text: "Inicio"
+        file: index.qmd
       - about.qmd
-      - posts.qmd   
+      - blog.qmd   
   search: 
     location: navbar
     type: overlay
