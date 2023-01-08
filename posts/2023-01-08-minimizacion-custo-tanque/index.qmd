@@ -1,8 +1,32 @@
 ---
 title: "Minimización do custo de fabricación dun tanque"
-format: gfm
-html-math-method: katex
+description: "blog post description (appears underneath the title in smaller text) which is included on the listing page"
 
+author:
+  - name: Anxo Sánchez
+    url: https://github.com/anxosanchez
+    orcid: 0000-0002-9757-1752
+    affiliation: Full Professor on Process Simulation and Optimiation (Industrial Chemistry) @ EEI Engineering School , University of Vigo
+    affiliation-url: https://webs.uvigo.es/asanchez/ 
+
+format: gfm
+html:
+    toc: true
+#    html-math-method: webtex
+
+
+date: 08-01-2023
+categories: 
+    - Optimización
+    - Excel
+ # self-defined categories
+
+#jupyter: python3
+
+#citation: 
+#  url: https://samanthacsik.github.io/posts/2022-10-24-quarto-blogs/ 
+#image: preview_image.jpg
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
 ---
 
 # Optimización do custo de fabricación dun tanque

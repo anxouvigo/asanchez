@@ -1,0 +1,291 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  letterpaper,
+  DIV=11,
+  numbers=noendperiod]{scrartcl}
+
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+% Make \paragraph and \subparagraph free-standing
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\KOMAoption{captions}{tableheading}
+\makeatletter
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[many]{tcolorbox}}
+\makeatother
+\makeatletter
+\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
+\makeatother
+\makeatletter
+\makeatother
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, interior hidden, borderline west={3pt}{0pt}{shadecolor}, enhanced, breakable, frame hidden, sharp corners]}{\end{tcolorbox}}\fi
+
+\hypertarget{optimizaciuxf3n-do-custo-de-fabricaciuxf3n-dun-tanque}{%
+\section{Optimización do custo de fabricación dun
+tanque}\label{optimizaciuxf3n-do-custo-de-fabricaciuxf3n-dun-tanque}}
+
+Os enxeñeiros químicos (así como outros especialistas como enxeñeiros
+mecánicos e civís) adoitan enfrontarse ao problema xeral do deseño de
+buques que transportan líquidos ou gases.
+
+\hypertarget{enunciado-do-problema}{%
+\subsection{Enunciado do problema}\label{enunciado-do-problema}}
+
+Supón que se che pide que determines as dimensións dun pequeno depósito
+cilíndrico para o transporte de residuos tóxicos que se transportará nun
+camión. O obxectivo xeral é minimizar o custo do tanque. Non obstante,
+ademais do custo, debe asegurarse de que pode manter a cantidade de
+líquido requirida e que non supere as dimensións do camión. Debido a que
+o tanque transportará residuos tóxicos, é necesario que teña un espesor
+determinado, dentro de certas normativas.
+
+Na figura 1 se amosa un esquema do tanque e da caixa. Como se pode ver
+nela, o tanque é un cilindro con dúas placas soldadas a cada extremo.
+
+Figura 1. Determinación das dimensións óptimas dun tanque cilíndrico
+para o transorte de lixo tóxico.
+
+O custo do tanque ten dous compoñentes:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Custos de materiais baseados no peso
+\item
+  Custos de soldadura baseados na lonxitude a soldar. Fíxate que este
+  último consiste en soldar tanto a xunta interior como a xunta externa
+  onde as placas se atopan co cilindro.
+\end{enumerate}
+
+Os datos necesarios para resolver o problema resúmense na táboa 1.
+
+\begin{longtable}[]{@{}llrl@{}}
+\toprule()
+Parámetro & Símbolo & Valor & Unidades \\
+\midrule()
+\endhead
+Volume requirido & V0 & 0.8 & m3 \\
+Espesor & t & 3.0 & cm \\
+Densidade & \(\rho\) & 8000.0 & kg/m3 \\
+Lonxitude de la caixa & Lmáx & 2.0 & m \\
+Ancho de la caixa & Dmáx & 1.0 & m \\
+Custo do material & Cm & 4.5 & €/kg \\
+Custo de soldadura & Cw & 20.0 & €/m \\
+\bottomrule()
+\end{longtable}
+
+\hypertarget{soluciuxf3n}{%
+\subsection{Solución}\label{soluciuxf3n}}
+
+O obxectivo aquí é construír un tanque a un custo mínimo. O custo está
+relacionado coas variables de deseño (lonxitude e diámetro), xa que
+teñen un efecto sobre a masa do tanque e as lonxitudes a soldar.
+Ademais, o problema ten restricións, xa que o tanque debe:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  caber no camión.
+\item
+  ter capacidade para o volume de material requirido.
+\end{enumerate}
+
+O custo derívase dos custos do material do tanque e da soldadura. Polo
+tanto, a función obxectiva está formulada como unha minimización: \[
+C = c_m+c_w l_w
+\] onde \(C\) = custo (€), \(m\) = masa (kg), \(l_w\) = lonxitude a
+soldar (m), \(c_m\) e \(c_w\) son factores de custo por masa (€\$/kg) e
+lonxitude de soldadura (\hspace{0pt}€/m), respectivamente.
+
+Despois, se relacionan a masa e a lonxitude de soldadura coas dimensións
+do tambor. Primeiro, calcúlase a masa como o volume do material pola súa
+densidade. O volume de material usado para construír as paredes laterais
+(é dicir, o cilindro) calcúlase do seguinte xeito: \[
+\begin{align*}
+V_{cilindro} = L \pi \left [ {\left ( \frac {D}{2} + t \right )}^2 - {\left ( \frac {D}{2} \right )}^2 \right ]
+\end{align*}
+\] Para cada placa circular nos extremos: \[
+V_{placa} = \pi { \left ( \frac {D}{2} +t  \right )}^2 t
+\] Deste xeito, a masa calcúlase segundo: \[
+m=\rho\left\{L \pi\left[\left(\frac{D}{2}+t\right)^{2}-\left(\frac{D}{2}\right)^{2}\right]+2 \pi\left(\frac{D}{2}+t\right)^{2} t\right\}
+\] onde \(\rho\) é a densidade (kg/m3) .
+
+A lonxitude de soldadura para unir cada placa é igual á circunferencia
+interna e externa do cilindro. Para as dúas placas, a lonxitude total da
+soldadura será: \[
+l_w = 2 \left [ 2 \pi \left ( \frac {D}{2} + t \right ) + 2 \pi \frac {D}{2} \right ] = 4 \pi (D + t)
+\] Dados os valores de \(D\) e \(L\) (lembra que o grosor \(t\) está
+establecido por regulación), as ecuacións (1), (2) e (3) proporcionan un
+medio para calcular o custo. Ten en conta tamén que cando as ecuacións
+(2) e (3) substitúense pola ecuación (1), A función obxectivo que se
+obtén non é lineal.
+
+Despois formúlanse as restricións. En primeiro lugar, débese calcular o
+volume que pode almacenar o tanque acabado: \[
+V = \frac {\pi D^2}{4} L
+\] O valor debe ser igual ó volume desexado. Deste xeito, unha
+restrición é: \[
+\frac {\pi D^2 L}{4} = V_0
+\] onde \(V_0\) é o volume desexado (m3).
+
+As restricións restantes teñen que ver con que o tanque se axuste ás
+dimensións da caixa do camión: \[
+\begin{align*}
+L \leq L_{máx} \\
+D \leq D_{máx}
+\end{align*}
+\] O problema agora está especificado. Coa substitución dos valores da
+táboa 1, resúmese como:
+
+Maximizar \(C\) = 4.5\(m\) + 20\(l_w\)
+
+suxeito a: \[
+\begin{align*}
+\frac {\pi D^2 L}{4} & = & 0.8 \\
+L & \leq & 2 \\
+D & \leq & 1
+\end{align*}
+\] onde: \[
+\begin{align*}
+m = 8000 \left\{ \left [ L \pi {\left ( \frac {D}{2} + 0.03 \right)}^2 - {\left ( \frac {D}{2} \right )}^2 \right] + 2 \pi {\left ( \frac {D}{2} + 0.03 \right )}^2 0.03 \right\}
+\end{align*}
+\] e: \[
+\begin{align*}
+l_w = 4 \pi (D + 0.03)
+\end{align*}
+\] Agora o problema pódese resolver de diferentes xeitos. Non obstante,
+o método máis sinxelo para un problema desta magnitude é empregar unha
+ferramenta como Solver de Excel.
+
+
+
+\end{document}

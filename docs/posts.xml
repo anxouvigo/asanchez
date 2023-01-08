@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>ASPAS</title>
+<link>https://webs.uvigo.es/asanchez/posts.html</link>
+<atom:link href="https://webs.uvigo.es/asanchez/posts.xml" rel="self" type="application/rss+xml"/>
+<description></description>
+<generator>quarto-1.2.280</generator>
+<lastBuildDate>Sun, 08 Jan 2023 11:21:46 GMT</lastBuildDate>
+<item>
+  <title></title>
+  <link>https://webs.uvigo.es/asanchez/posts/2023-01-08-minimizacion-custo-tanque/index.html</link>
+  <description><![CDATA[ 
+
+
+
+<section id="optimización-do-custo-de-fabricación-dun-tanque" class="level1">
+<h1>Optimización do custo de fabricación dun tanque</h1>
+<p>Os enxeñeiros químicos (así como outros especialistas como enxeñeiros mecánicos e civís) adoitan enfrontarse ao problema xeral do deseño de buques que transportan líquidos ou gases.</p>
+<section id="enunciado-do-problema" class="level2">
+<h2 class="anchored" data-anchor-id="enunciado-do-problema">Enunciado do problema</h2>
+<p>Supón que se che pide que determines as dimensións dun pequeno depósito cilíndrico para o transporte de residuos tóxicos que se transportará nun camión. O obxectivo xeral é minimizar o custo do tanque. Non obstante, ademais do custo, debe asegurarse de que pode manter a cantidade de líquido requirida e que non supere as dimensións do camión. Debido a que o tanque transportará residuos tóxicos, é necesario que teña un espesor determinado, dentro de certas normativas.</p>
+<p>Na figura 1 se amosa un esquema do tanque e da caixa. Como se pode ver nela, o tanque é un cilindro con dúas placas soldadas a cada extremo.</p>
+<p><img src="https://webs.uvigo.es/asanchez/posts/2023-01-08-minimizacion-custo-tanque/C:/Users/anxos/OneDrive - Universidade de Vigo/Teoria/eqi1/Captura de pantalla 2022-10-13 152131.png" alt="Captura de pantalla 2022-10-13 152131" style="zoom:60%;"></p>
+<center>
+<small> Figura 1. Determinación das dimensións óptimas dun tanque cilíndrico para o transorte de lixo tóxico. </small>
+</center>
+<p>O custo do tanque ten dous compoñentes:</p>
+<ol type="1">
+<li>Custos de materiais baseados no peso</li>
+<li>Custos de soldadura baseados na lonxitude a soldar. Fíxate que este último consiste en soldar tanto a xunta interior como a xunta externa onde as placas se atopan co cilindro.</li>
+</ol>
+<p>Os datos necesarios para resolver o problema resúmense na táboa 1.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Parámetro</th>
+<th>Símbolo</th>
+<th style="text-align: right;">Valor</th>
+<th>Unidades</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Volume requirido</td>
+<td>V<sub>0</sub></td>
+<td style="text-align: right;">0.8</td>
+<td>m<sup>3</sup></td>
+</tr>
+<tr class="even">
+<td>Espesor</td>
+<td>t</td>
+<td style="text-align: right;">3.0</td>
+<td>cm</td>
+</tr>
+<tr class="odd">
+<td>Densidade</td>
+<td><img src="https://latex.codecogs.com/png.latex?%5Crho"></td>
+<td style="text-align: right;">8000.0</td>
+<td>kg/m<sup>3</sup></td>
+</tr>
+<tr class="even">
+<td>Lonxitude de la caixa</td>
+<td>L<sub>máx</sub></td>
+<td style="text-align: right;">2.0</td>
+<td>m</td>
+</tr>
+<tr class="odd">
+<td>Ancho de la caixa</td>
+<td>D<sub>máx</sub></td>
+<td style="text-align: right;">1.0</td>
+<td>m</td>
+</tr>
+<tr class="even">
+<td>Custo do material</td>
+<td>C<sub>m</sub></td>
+<td style="text-align: right;">4.5</td>
+<td>€/kg</td>
+</tr>
+<tr class="odd">
+<td>Custo de soldadura</td>
+<td>C<sub>w</sub></td>
+<td style="text-align: right;">20.0</td>
+<td>€/m</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="solución" class="level2">
+<h2 class="anchored" data-anchor-id="solución">Solución</h2>
+<p>O obxectivo aquí é construír un tanque a un custo mínimo. O custo está relacionado coas variables de deseño (lonxitude e diámetro), xa que teñen un efecto sobre a masa do tanque e as lonxitudes a soldar. Ademais, o problema ten restricións, xa que o tanque debe:</p>
+<ol type="1">
+<li>caber no camión.</li>
+<li>ter capacidade para o volume de material requirido.</li>
+</ol>
+<p>O custo derívase dos custos do material do tanque e da soldadura. Polo tanto, a función obxectiva está formulada como unha minimización: <img src="https://latex.codecogs.com/png.latex?%0AC%20=%20c_m+c_w%20l_w%0A"> onde <img src="https://latex.codecogs.com/png.latex?C"> = custo (€), <img src="https://latex.codecogs.com/png.latex?m"> = masa (kg), <img src="https://latex.codecogs.com/png.latex?l_w"> = lonxitude a soldar (m), <img src="https://latex.codecogs.com/png.latex?c_m"> e <img src="https://latex.codecogs.com/png.latex?c_w"> son factores de custo por masa (€$/kg) e lonxitude de soldadura (​€/m), respectivamente.</p>
+<p>Despois, se relacionan a masa e a lonxitude de soldadura coas dimensións do tambor. Primeiro, calcúlase a masa como o volume do material pola súa densidade. O volume de material usado para construír as paredes laterais (é dicir, o cilindro) calcúlase do seguinte xeito: <img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Balign*%7D%0AV_%7Bcilindro%7D%20=%20L%20%5Cpi%20%5Cleft%20%5B%20%7B%5Cleft%20(%20%5Cfrac%20%7BD%7D%7B2%7D%20+%20t%20%5Cright%20)%7D%5E2%20-%20%7B%5Cleft%20(%20%5Cfrac%20%7BD%7D%7B2%7D%20%5Cright%20)%7D%5E2%20%5Cright%20%5D%0A%5Cend%7Balign*%7D%0A"> Para cada placa circular nos extremos: <img src="https://latex.codecogs.com/png.latex?%0AV_%7Bplaca%7D%20=%20%5Cpi%20%7B%20%5Cleft%20(%20%5Cfrac%20%7BD%7D%7B2%7D%20+t%20%20%5Cright%20)%7D%5E2%20t%0A"> Deste xeito, a masa calcúlase segundo: <img src="https://latex.codecogs.com/png.latex?%0Am=%5Crho%5Cleft%5C%7BL%20%5Cpi%5Cleft%5B%5Cleft(%5Cfrac%7BD%7D%7B2%7D+t%5Cright)%5E%7B2%7D-%5Cleft(%5Cfrac%7BD%7D%7B2%7D%5Cright)%5E%7B2%7D%5Cright%5D+2%20%5Cpi%5Cleft(%5Cfrac%7BD%7D%7B2%7D+t%5Cright)%5E%7B2%7D%20t%5Cright%5C%7D%0A"> onde <img src="https://latex.codecogs.com/png.latex?%5Crho"> é a densidade (kg/m<sup>3</sup>) .</p>
+<p>A lonxitude de soldadura para unir cada placa é igual á circunferencia interna e externa do cilindro. Para as dúas placas, a lonxitude total da soldadura será: <img src="https://latex.codecogs.com/png.latex?%0Al_w%20=%202%20%5Cleft%20%5B%202%20%5Cpi%20%5Cleft%20(%20%5Cfrac%20%7BD%7D%7B2%7D%20+%20t%20%5Cright%20)%20+%202%20%5Cpi%20%5Cfrac%20%7BD%7D%7B2%7D%20%5Cright%20%5D%20=%204%20%5Cpi%20(D%20+%20t)%0A"> Dados os valores de <img src="https://latex.codecogs.com/png.latex?D"> e <img src="https://latex.codecogs.com/png.latex?L"> (lembra que o grosor <img src="https://latex.codecogs.com/png.latex?t"> está establecido por regulación), as ecuacións (1), (2) e (3) proporcionan un medio para calcular o custo. Ten en conta tamén que cando as ecuacións (2) e (3) substitúense pola ecuación (1), A función obxectivo que se obtén non é lineal.</p>
+<p>Despois formúlanse as restricións. En primeiro lugar, débese calcular o volume que pode almacenar o tanque acabado: <img src="https://latex.codecogs.com/png.latex?%0AV%20=%20%5Cfrac%20%7B%5Cpi%20D%5E2%7D%7B4%7D%20L%0A"> O valor debe ser igual ó volume desexado. Deste xeito, unha restrición é: <img src="https://latex.codecogs.com/png.latex?%0A%5Cfrac%20%7B%5Cpi%20D%5E2%20L%7D%7B4%7D%20=%20V_0%0A"> onde <img src="https://latex.codecogs.com/png.latex?V_0"> é o volume desexado (m<sup>3</sup>).</p>
+<p>As restricións restantes teñen que ver con que o tanque se axuste ás dimensións da caixa do camión: <img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Balign*%7D%0AL%20%5Cleq%20L_%7Bm%C3%A1x%7D%20%5C%5C%0AD%20%5Cleq%20D_%7Bm%C3%A1x%7D%0A%5Cend%7Balign*%7D%0A"> O problema agora está especificado. Coa substitución dos valores da táboa 1, resúmese como:</p>
+<p>Maximizar <img src="https://latex.codecogs.com/png.latex?C"> = 4.5<img src="https://latex.codecogs.com/png.latex?m"> + 20<img src="https://latex.codecogs.com/png.latex?l_w"></p>
+<p>suxeito a: <img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Balign*%7D%0A%5Cfrac%20%7B%5Cpi%20D%5E2%20L%7D%7B4%7D%20&amp;%20=%20&amp;%200.8%20%5C%5C%0AL%20&amp;%20%5Cleq%20&amp;%202%20%5C%5C%0AD%20&amp;%20%5Cleq%20&amp;%201%0A%5Cend%7Balign*%7D%0A"> onde: <img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Balign*%7D%0Am%20=%208000%20%5Cleft%5C%7B%20%5Cleft%20%5B%20L%20%5Cpi%20%7B%5Cleft%20(%20%5Cfrac%20%7BD%7D%7B2%7D%20+%200.03%20%5Cright)%7D%5E2%20-%20%7B%5Cleft%20(%20%5Cfrac%20%7BD%7D%7B2%7D%20%5Cright%20)%7D%5E2%20%5Cright%5D%20+%202%20%5Cpi%20%7B%5Cleft%20(%20%5Cfrac%20%7BD%7D%7B2%7D%20+%200.03%20%5Cright%20)%7D%5E2%200.03%20%5Cright%5C%7D%0A%5Cend%7Balign*%7D%0A"> e: <img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Balign*%7D%0Al_w%20=%204%20%5Cpi%20(D%20+%200.03)%0A%5Cend%7Balign*%7D%0A"> Agora o problema pódese resolver de diferentes xeitos. Non obstante, o método máis sinxelo para un problema desta magnitude é empregar unha ferramenta como Solver de Excel.</p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <guid>https://webs.uvigo.es/asanchez/posts/2023-01-08-minimizacion-custo-tanque/index.html</guid>
+  <pubDate>Sun, 08 Jan 2023 11:21:46 GMT</pubDate>
+</item>
+</channel>
+</rss>

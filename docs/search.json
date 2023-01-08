@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Author",
+    "section": "",
+    "text": "Full Professor @ Chemical Engineering Department, University of Vigo (SPAIN)"
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "Author",
+    "section": "Education",
+    "text": "Education\nPhD in Chemistry | 1985 | University of Santiago de Compostela"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ASPAS",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "posts/2023-01-08-minimizacion-custo-tanque/index.html",
+    "href": "posts/2023-01-08-minimizacion-custo-tanque/index.html",
+    "title": "ASPAS",
+    "section": "",
+    "text": "Os enxeñeiros químicos (así como outros especialistas como enxeñeiros mecánicos e civís) adoitan enfrontarse ao problema xeral do deseño de buques que transportan líquidos ou gases.\n\n\nSupón que se che pide que determines as dimensións dun pequeno depósito cilíndrico para o transporte de residuos tóxicos que se transportará nun camión. O obxectivo xeral é minimizar o custo do tanque. Non obstante, ademais do custo, debe asegurarse de que pode manter a cantidade de líquido requirida e que non supere as dimensións do camión. Debido a que o tanque transportará residuos tóxicos, é necesario que teña un espesor determinado, dentro de certas normativas.\nNa figura 1 se amosa un esquema do tanque e da caixa. Como se pode ver nela, o tanque é un cilindro con dúas placas soldadas a cada extremo.\n\n\n Figura 1. Determinación das dimensións óptimas dun tanque cilíndrico para o transorte de lixo tóxico. \n\nO custo do tanque ten dous compoñentes:\n\nCustos de materiais baseados no peso\nCustos de soldadura baseados na lonxitude a soldar. Fíxate que este último consiste en soldar tanto a xunta interior como a xunta externa onde as placas se atopan co cilindro.\n\nOs datos necesarios para resolver o problema resúmense na táboa 1.\n\n\n\nParámetro\nSímbolo\nValor\nUnidades\n\n\n\n\nVolume requirido\nV0\n0.8\nm3\n\n\nEspesor\nt\n3.0\ncm\n\n\nDensidade\n\\(\\rho\\)\n8000.0\nkg/m3\n\n\nLonxitude de la caixa\nLmáx\n2.0\nm\n\n\nAncho de la caixa\nDmáx\n1.0\nm\n\n\nCusto do material\nCm\n4.5\n€/kg\n\n\nCusto de soldadura\nCw\n20.0\n€/m\n\n\n\n\n\n\nO obxectivo aquí é construír un tanque a un custo mínimo. O custo está relacionado coas variables de deseño (lonxitude e diámetro), xa que teñen un efecto sobre a masa do tanque e as lonxitudes a soldar. Ademais, o problema ten restricións, xa que o tanque debe:\n\ncaber no camión.\nter capacidade para o volume de material requirido.\n\nO custo derívase dos custos do material do tanque e da soldadura. Polo tanto, a función obxectiva está formulada como unha minimización: \\[\nC = c_m+c_w l_w\n\\] onde \\(C\\) = custo (€), \\(m\\) = masa (kg), \\(l_w\\) = lonxitude a soldar (m), \\(c_m\\) e \\(c_w\\) son factores de custo por masa (€$/kg) e lonxitude de soldadura (​€/m), respectivamente.\nDespois, se relacionan a masa e a lonxitude de soldadura coas dimensións do tambor. Primeiro, calcúlase a masa como o volume do material pola súa densidade. O volume de material usado para construír as paredes laterais (é dicir, o cilindro) calcúlase do seguinte xeito: \\[\n\\begin{align*}\nV_{cilindro} = L \\pi \\left [ {\\left ( \\frac {D}{2} + t \\right )}^2 - {\\left ( \\frac {D}{2} \\right )}^2 \\right ]\n\\end{align*}\n\\] Para cada placa circular nos extremos: \\[\nV_{placa} = \\pi { \\left ( \\frac {D}{2} +t  \\right )}^2 t\n\\] Deste xeito, a masa calcúlase segundo: \\[\nm=\\rho\\left\\{L \\pi\\left[\\left(\\frac{D}{2}+t\\right)^{2}-\\left(\\frac{D}{2}\\right)^{2}\\right]+2 \\pi\\left(\\frac{D}{2}+t\\right)^{2} t\\right\\}\n\\] onde \\(\\rho\\) é a densidade (kg/m3) .\nA lonxitude de soldadura para unir cada placa é igual á circunferencia interna e externa do cilindro. Para as dúas placas, a lonxitude total da soldadura será: \\[\nl_w = 2 \\left [ 2 \\pi \\left ( \\frac {D}{2} + t \\right ) + 2 \\pi \\frac {D}{2} \\right ] = 4 \\pi (D + t)\n\\] Dados os valores de \\(D\\) e \\(L\\) (lembra que o grosor \\(t\\) está establecido por regulación), as ecuacións (1), (2) e (3) proporcionan un medio para calcular o custo. Ten en conta tamén que cando as ecuacións (2) e (3) substitúense pola ecuación (1), A función obxectivo que se obtén non é lineal.\nDespois formúlanse as restricións. En primeiro lugar, débese calcular o volume que pode almacenar o tanque acabado: \\[\nV = \\frac {\\pi D^2}{4} L\n\\] O valor debe ser igual ó volume desexado. Deste xeito, unha restrición é: \\[\n\\frac {\\pi D^2 L}{4} = V_0\n\\] onde \\(V_0\\) é o volume desexado (m3).\nAs restricións restantes teñen que ver con que o tanque se axuste ás dimensións da caixa do camión: \\[\n\\begin{align*}\nL \\leq L_{máx} \\\\\nD \\leq D_{máx}\n\\end{align*}\n\\] O problema agora está especificado. Coa substitución dos valores da táboa 1, resúmese como:\nMaximizar \\(C\\) = 4.5\\(m\\) + 20\\(l_w\\)\nsuxeito a: \\[\n\\begin{align*}\n\\frac {\\pi D^2 L}{4} & = & 0.8 \\\\\nL & \\leq & 2 \\\\\nD & \\leq & 1\n\\end{align*}\n\\] onde: \\[\n\\begin{align*}\nm = 8000 \\left\\{ \\left [ L \\pi {\\left ( \\frac {D}{2} + 0.03 \\right)}^2 - {\\left ( \\frac {D}{2} \\right )}^2 \\right] + 2 \\pi {\\left ( \\frac {D}{2} + 0.03 \\right )}^2 0.03 \\right\\}\n\\end{align*}\n\\] e: \\[\n\\begin{align*}\nl_w = 4 \\pi (D + 0.03)\n\\end{align*}\n\\] Agora o problema pódese resolver de diferentes xeitos. Non obstante, o método máis sinxelo para un problema desta magnitude é empregar unha ferramenta como Solver de Excel."
+  },
+  {
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Optimización do custo de fabricación dun tanque\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  }
+]

@@ -2,22 +2,29 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "Anxo Sánchez",
+    "title": "Author",
     "section": "",
     "text": "Full Professor @ Chemical Engineering Department, University of Vigo (SPAIN)"
   },
   {
     "objectID": "about.html#education",
     "href": "about.html#education",
-    "title": "Anxo Sánchez",
+    "title": "Author",
     "section": "Education",
     "text": "Education\nPhD in Chemistry | 1985 | University of Santiago de Compostela"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Asanchez",
+    "title": "ASPAS",
     "section": "",
     "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "Blog",
+    "section": "",
+    "text": "No matching items"
   }
 ]

@@ -1,24 +1,31 @@
 project:
   type: website
-  output-dir: public
-
+  output-dir: docs
+  
 website:
   title: "ASPAS"
+  site-url: https://webs.uvigo.es/asanchez
+#  description: "Site da asignatura Experimentación en Química Industrial 1"
   navbar:
+    search: true
+    right:
+      
+      - icon: github
+        href: https://github.com/anxosanchez
+      - icon: twitter
+        href: https://www.titter.con/anxosanchez
     left:
-      - text: "Inicio"
+      - text: "Home"
         file: index.qmd
       - about.qmd
-      - blog.qmd   
-  search: 
-    location: navbar
-    type: overlay
+      - posts.qmd
+  margin-header: subscribe.html
 
 format:
   html:
     theme: 
-      dark: solar
-      light: morph
+      dark: darkly
+      light: flatly
       
     css: styles.css
     toc: true

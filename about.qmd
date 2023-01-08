@@ -1,5 +1,5 @@
 ---
-title: "Anxo Sánchez"
+title: "Author"
 about:
   template: jolla
   image: 11378621.jpg

@@ -1,8 +1,0 @@
----
-title: "Blog de Anxo"
-listing: default
-    contents: posts
-    sort: "date desc"
-    categories: true
-    feed: true    
----
